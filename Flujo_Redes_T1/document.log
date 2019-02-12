@@ -1,0 +1,576 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.9.13)  11 FEB 2019 23:59
+entering extended mode
+**./document.tex
+(document.tex
+LaTeX2e <2018-04-01> patch level 5
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+Package: inputenc 2018/04/06 v1.3b Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\latin1.def"
+File: latin1.def 2018/04/06 v1.3b Input encoding file
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2017/09/02 v2.17a AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen103
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen104
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count88
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count89
+\leftroot@=\count90
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count91
+\DOTSCASE@=\count92
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count93
+\c@MaxMatrixCols=\count94
+\dotsspace@=\muskip10
+\c@parentequation=\count95
+\dspbrk@lvl=\count96
+\tag@help=\toks17
+\row@=\count97
+\column@=\count98
+\maxfields@=\count99
+\andhelp@=\toks18
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks19
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks21
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen112
+\Gin@req@width=\dimen113
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty"
+\lst@mode=\count100
+\lst@gtempboxa=\box28
+\lst@token=\toks22
+\lst@length=\count101
+\lst@currlwidth=\dimen114
+\lst@column=\count102
+\lst@pos=\count103
+\lst@lostspace=\dimen115
+\lst@width=\dimen116
+\lst@newlines=\count104
+\lst@lineno=\count105
+\lst@maxwidth=\dimen117
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
+\c@lstnumber=\count106
+\lst@skipnumbers=\count107
+\lst@framebox=\box29
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+File: listings.cfg 2018/09/02 1.7 listings configuration
+))
+Package: listings 2018/09/02 1.7 (Carsten Heinz)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+Package: geometry 2018/04/16 v5.8 Page Geometry
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count108
+\Gm@cntv=\count109
+\c@Gm@tempcnt=\count110
+\Gm@bindingoffset=\dimen118
+\Gm@wd@mp=\dimen119
+\Gm@odd@mp=\dimen120
+\Gm@even@mp=\dimen121
+\Gm@layoutwidth=\dimen122
+\Gm@layoutheight=\dimen123
+\Gm@layouthoffset=\dimen124
+\Gm@layoutvoffset=\dimen125
+\Gm@dimlist=\toks23
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip46
+\bibsep=\skip47
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count111
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2018/06/05 3.22 The Babel package
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\switch.def"
+File: switch.def 2018/06/05 3.22 Babel switching mechanism
+)
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg"
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\babel-english\english.ldf"
+Language: english 2017/06/06 v3.3r English support from the babel system
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2018/06/05 3.22 Babel common definitions
+\babel@savecnt=\count112
+\U@D=\dimen126
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\txtbabel.def")
+\bbl@dirlevel=\count113
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2018/09/02 1.7 listings language file
+)
+
+LaTeX Warning: Unused global option(s):
+    [openany].
+
+(document.aux)
+\openout1 = `document.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+ ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count114
+\scratchdimen=\dimen127
+\scratchbox=\box30
+\nofMPsegments=\count115
+\nofMParguments=\count116
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count117
+\MPscratchDim=\dimen128
+\MPnumerator=\count118
+\makeMPintoPDFobject=\count119
+\everyMPtoPDFconversion=\toks25
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+\c@lstlisting=\count120
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
+* v-part:(T,H,B)=(85.35826pt, 702.78308pt, 56.9055pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=483.69687pt
+* \textheight=702.78308pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-23.91173pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=57.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 54.
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 54.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+(01undirected_acyclic_graph.py)
+Package epstopdf Info: Source file: <Graph01.eps>
+(epstopdf)                    date: 2019-02-11 17:58:38
+(epstopdf)                    size: 10431 bytes
+(epstopdf)             Output file: <Graph01-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-02-11 22:32:19
+(epstopdf)                    size: 8517 bytes
+(epstopdf)             Command: <epstopdf --outfile=Graph01-eps-converted-to.pd
+f Graph01.eps>
+(epstopdf)             \includegraphics on input line 62.
+Package epstopdf Info: Output file is already uptodate.
+<Graph01-eps-converted-to.pdf, id=1, 462.72874pt x 346.29375pt>
+File: Graph01-eps-converted-to.pdf Graphic file (type pdf)
+<use Graph01-eps-converted-to.pdf>
+Package pdftex.def Info: Graph01-eps-converted-to.pdf  used on input line 62.
+(pdftex.def)             Requested size: 370.1835pt x 277.03537pt.
+ [1
+
+{C:/Users/Oscar Alejandro/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <.
+/Graph01-eps-converted-to.pdf>]
+(02undirected_cyclic_graph.py)
+Package epstopdf Info: Source file: <Graph02.eps>
+(epstopdf)                    date: 2019-02-11 17:58:45
+(epstopdf)                    size: 5529 bytes
+(epstopdf)             Output file: <Graph02-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-02-11 22:38:01
+(epstopdf)                    size: 5314 bytes
+(epstopdf)             Command: <epstopdf --outfile=Graph02-eps-converted-to.pd
+f Graph02.eps>
+(epstopdf)             \includegraphics on input line 71.
+Package epstopdf Info: Output file is already uptodate.
+<Graph02-eps-converted-to.pdf, id=28, 462.72874pt x 346.29375pt>
+File: Graph02-eps-converted-to.pdf Graphic file (type pdf)
+<use Graph02-eps-converted-to.pdf>
+Package pdftex.def Info: Graph02-eps-converted-to.pdf  used on input line 71.
+(pdftex.def)             Requested size: 370.1835pt x 277.03537pt.
+ [2 <./Graph02-eps-converted-to.pdf>]
+(03undirected_reflexive_graph.py)
+Package epstopdf Info: Source file: <Graph03.eps>
+(epstopdf)                    date: 2019-02-11 23:41:33
+(epstopdf)                    size: 6335 bytes
+(epstopdf)             Output file: <Graph03-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-02-11 23:53:51
+(epstopdf)                    size: 5526 bytes
+(epstopdf)             Command: <epstopdf --outfile=Graph03-eps-converted-to.pd
+f Graph03.eps>
+(epstopdf)             \includegraphics on input line 82.
+Package epstopdf Info: Output file is already uptodate.
+<Graph03-eps-converted-to.pdf, id=41, 462.72874pt x 346.29375pt>
+File: Graph03-eps-converted-to.pdf Graphic file (type pdf)
+<use Graph03-eps-converted-to.pdf>
+Package pdftex.def Info: Graph03-eps-converted-to.pdf  used on input line 82.
+(pdftex.def)             Requested size: 370.1835pt x 277.03537pt.
+ [3 <./Graph03-eps-converted-to.pdf>]
+(04directed_acyclic_graph.py)
+Package epstopdf Info: Source file: <Graph04.eps>
+(epstopdf)                    date: 2019-02-11 23:43:22
+(epstopdf)                    size: 7358 bytes
+(epstopdf)             Output file: <Graph04-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-02-11 23:53:53
+(epstopdf)                    size: 5998 bytes
+(epstopdf)             Command: <epstopdf --outfile=Graph04-eps-converted-to.pd
+f Graph04.eps>
+(epstopdf)             \includegraphics on input line 93.
+Package epstopdf Info: Output file is already uptodate.
+<Graph04-eps-converted-to.pdf, id=54, 462.72874pt x 346.29375pt>
+File: Graph04-eps-converted-to.pdf Graphic file (type pdf)
+<use Graph04-eps-converted-to.pdf>
+Package pdftex.def Info: Graph04-eps-converted-to.pdf  used on input line 93.
+(pdftex.def)             Requested size: 370.1835pt x 277.03537pt.
+ [4 <./Graph04-eps-converted-to.pdf>]
+(05directed_ciclic_graph.py)
+Package epstopdf Info: Source file: <Graph05.eps>
+(epstopdf)                    date: 2019-02-11 23:44:09
+(epstopdf)                    size: 16721 bytes
+(epstopdf)             Output file: <Graph05-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-02-11 23:53:54
+(epstopdf)                    size: 11202 bytes
+(epstopdf)             Command: <epstopdf --outfile=Graph05-eps-converted-to.pd
+f Graph05.eps>
+(epstopdf)             \includegraphics on input line 104.
+Package epstopdf Info: Output file is already uptodate.
+<Graph05-eps-converted-to.pdf, id=70, 462.72874pt x 346.29375pt>
+File: Graph05-eps-converted-to.pdf Graphic file (type pdf)
+<use Graph05-eps-converted-to.pdf>
+Package pdftex.def Info: Graph05-eps-converted-to.pdf  used on input line 104.
+(pdftex.def)             Requested size: 370.1835pt x 277.03537pt.
+ [5 <./Graph05-eps-converted-to.pdf>]
+(06directed_reflexive_graph.py)
+Package epstopdf Info: Source file: <Graph06.eps>
+(epstopdf)                    date: 2019-02-11 23:44:33
+(epstopdf)                    size: 8975 bytes
+(epstopdf)             Output file: <Graph06-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-02-11 23:53:56
+(epstopdf)                    size: 6869 bytes
+(epstopdf)             Command: <epstopdf --outfile=Graph06-eps-converted-to.pd
+f Graph06.eps>
+(epstopdf)             \includegraphics on input line 114.
+Package epstopdf Info: Output file is already uptodate.
+<Graph06-eps-converted-to.pdf, id=95, 462.72874pt x 346.29375pt>
+File: Graph06-eps-converted-to.pdf Graphic file (type pdf)
+<use Graph06-eps-converted-to.pdf>
+Package pdftex.def Info: Graph06-eps-converted-to.pdf  used on input line 114.
+(pdftex.def)             Requested size: 370.1835pt x 277.03537pt.
+ [6 <./Graph06-eps-converted-to.pdf>]
+(07undirected_acyclic_multigraph.py)
+Package epstopdf Info: Source file: <Graph07.eps>
+(epstopdf)                    date: 2019-02-11 23:46:19
+(epstopdf)                    size: 4784 bytes
+(epstopdf)             Output file: <Graph07-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-02-11 23:53:58
+(epstopdf)                    size: 4838 bytes
+(epstopdf)             Command: <epstopdf --outfile=Graph07-eps-converted-to.pd
+f Graph07.eps>
+(epstopdf)             \includegraphics on input line 125.
+Package epstopdf Info: Output file is already uptodate.
+<Graph07-eps-converted-to.pdf, id=112, 462.72874pt x 346.29375pt>
+File: Graph07-eps-converted-to.pdf Graphic file (type pdf)
+<use Graph07-eps-converted-to.pdf>
+Package pdftex.def Info: Graph07-eps-converted-to.pdf  used on input line 125.
+(pdftex.def)             Requested size: 370.1835pt x 277.03537pt.
+ (08undirected_cyclic_multigraph.py)
+Package epstopdf Info: Source file: <Graph08.eps>
+(epstopdf)                    date: 2019-02-11 23:54:40
+(epstopdf)                    size: 6405 bytes
+(epstopdf)             Output file: <Graph08-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-02-11 23:55:07
+(epstopdf)                    size: 5559 bytes
+(epstopdf)             Command: <epstopdf --outfile=Graph08-eps-converted-to.pd
+f Graph08.eps>
+(epstopdf)             \includegraphics on input line 135.
+Package epstopdf Info: Output file is already uptodate.
+<Graph08-eps-converted-to.pdf, id=113, 462.72874pt x 346.29375pt>
+File: Graph08-eps-converted-to.pdf Graphic file (type pdf)
+<use Graph08-eps-converted-to.pdf>
+Package pdftex.def Info: Graph08-eps-converted-to.pdf  used on input line 135.
+(pdftex.def)             Requested size: 370.1835pt x 277.03537pt.
+
+[7 <./Graph07-eps-converted-to.pdf>] (09undirected_reflexive_multigraph.py)
+Package epstopdf Info: Source file: <Graph09.eps>
+(epstopdf)                    date: 2019-02-11 23:46:27
+(epstopdf)                    size: 6223 bytes
+(epstopdf)             Output file: <Graph09-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-02-11 23:53:59
+(epstopdf)                    size: 5331 bytes
+(epstopdf)             Command: <epstopdf --outfile=Graph09-eps-converted-to.pd
+f Graph09.eps>
+(epstopdf)             \includegraphics on input line 145.
+Package epstopdf Info: Output file is already uptodate.
+<Graph09-eps-converted-to.pdf, id=127, 462.72874pt x 346.29375pt>
+File: Graph09-eps-converted-to.pdf Graphic file (type pdf)
+<use Graph09-eps-converted-to.pdf>
+Package pdftex.def Info: Graph09-eps-converted-to.pdf  used on input line 145.
+(pdftex.def)             Requested size: 370.1835pt x 277.03537pt.
+
+[8 <./Graph08-eps-converted-to.pdf>] (10directed_acyclic_multigraph.py)
+Package epstopdf Info: Source file: <Graph10.eps>
+(epstopdf)                    date: 2019-02-11 23:46:43
+(epstopdf)                    size: 8072 bytes
+(epstopdf)             Output file: <Graph10-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-02-11 23:54:01
+(epstopdf)                    size: 6095 bytes
+(epstopdf)             Command: <epstopdf --outfile=Graph10-eps-converted-to.pd
+f Graph10.eps>
+(epstopdf)             \includegraphics on input line 155.
+Package epstopdf Info: Output file is already uptodate.
+<Graph10-eps-converted-to.pdf, id=140, 462.72874pt x 346.29375pt>
+File: Graph10-eps-converted-to.pdf Graphic file (type pdf)
+<use Graph10-eps-converted-to.pdf>
+Package pdftex.def Info: Graph10-eps-converted-to.pdf  used on input line 155.
+(pdftex.def)             Requested size: 370.1835pt x 277.03537pt.
+
+[9 <./Graph09-eps-converted-to.pdf>] (11directed_cyclic_multigraph.py)
+Package epstopdf Info: Source file: <Graph11.eps>
+(epstopdf)                    date: 2019-02-11 23:47:36
+(epstopdf)                    size: 14667 bytes
+(epstopdf)             Output file: <Graph11-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-02-11 23:54:03
+(epstopdf)                    size: 10576 bytes
+(epstopdf)             Command: <epstopdf --outfile=Graph11-eps-converted-to.pd
+f Graph11.eps>
+(epstopdf)             \includegraphics on input line 164.
+Package epstopdf Info: Output file is already uptodate.
+<Graph11-eps-converted-to.pdf, id=154, 462.72874pt x 346.29375pt>
+File: Graph11-eps-converted-to.pdf Graphic file (type pdf)
+<use Graph11-eps-converted-to.pdf>
+Package pdftex.def Info: Graph11-eps-converted-to.pdf  used on input line 164.
+(pdftex.def)             Requested size: 370.1835pt x 277.03537pt.
+ [10 <./Graph10-eps-converted-to.pdf>] (12directed_reflexive_multigraph.py)
+Package epstopdf Info: Source file: <Graph12.eps>
+(epstopdf)                    date: 2019-02-11 23:47:49
+(epstopdf)                    size: 13344 bytes
+(epstopdf)             Output file: <Graph12-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-02-11 23:54:04
+(epstopdf)                    size: 9248 bytes
+(epstopdf)             Command: <epstopdf --outfile=Graph12-eps-converted-to.pd
+f Graph12.eps>
+(epstopdf)             \includegraphics on input line 173.
+Package epstopdf Info: Output file is already uptodate.
+<Graph12-eps-converted-to.pdf, id=168, 462.72874pt x 346.29375pt>
+File: Graph12-eps-converted-to.pdf Graphic file (type pdf)
+<use Graph12-eps-converted-to.pdf>
+Package pdftex.def Info: Graph12-eps-converted-to.pdf  used on input line 173.
+(pdftex.def)             Requested size: 370.1835pt x 277.03537pt.
+ [11 <./Graph11-eps-converted-to.pdf>] (document.bbl) [12 <./Graph12-eps-conver
+ted-to.pdf>]
+(document.aux) ) 
+Here is how much of TeX's memory you used:
+ 5697 strings out of 492973
+ 77814 string characters out of 3135900
+ 522530 words of memory out of 3000000
+ 9414 multiletter control sequences out of 15000+200000
+ 11234 words of font info for 44 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 41i,7n,40p,588b,1284s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb
+x12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10
+.pfb>
+Output written on document.pdf (12 pages, 233242 bytes).
+PDF statistics:
+ 250 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+
