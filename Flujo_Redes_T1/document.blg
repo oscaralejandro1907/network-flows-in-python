@@ -1,0 +1,28 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: document.aux
+The style file: plainnat.bst
+Database file #1: document.bib
+Warning--entry type for "reflexivo1" isn't style-file defined
+--line 18 of file document.bib
+Warning--entry type for "graph2" isn't style-file defined
+--line 25 of file document.bib
+Name 1 in "Ian Robinson, Jim Webber, and Emil Eifrem" has a comma at the end for entry graphdatabase
+while executing---line 1347 of file plainnat.bst
+Name 1 in "Ian Robinson, Jim Webber, and Emil Eifrem" has a comma at the end for entry graphdatabase
+while executing---line 1347 of file plainnat.bst
+Too many commas in name 1 of "Carlos Garcia, Abel Rodriguez, Norma Cabrera, Luisa Gonzalez" for entry scielo2010
+while executing---line 1347 of file plainnat.bst
+Too many commas in name 1 of "Carlos Garcia, Abel Rodriguez, Norma Cabrera, Luisa Gonzalez" for entry scielo2010
+while executing---line 1347 of file plainnat.bst
+Warning--empty journal in capcha2016teoria
+Too many commas in name 1 of "Carlos Garcia, Abel Rodriguez, Norma Cabrera, Luisa Gonzalez" for entry scielo2010
+while executing---line 1429 of file plainnat.bst
+Too many commas in name 1 of "Carlos Garcia, Abel Rodriguez, Norma Cabrera, Luisa Gonzalez" for entry scielo2010
+while executing---line 1429 of file plainnat.bst
+Warning--there's a number but no volume in scielo2010
+Warning--empty booktitle in grafo2
+Name 1 in "Ian Robinson, Jim Webber, and Emil Eifrem" has a comma at the end for entry graphdatabase
+while executing---line 1429 of file plainnat.bst
+Name 1 in "Ian Robinson, Jim Webber, and Emil Eifrem" has a comma at the end for entry graphdatabase
+while executing---line 1429 of file plainnat.bst
+Warning--empty publisher in multi2005jesus
+(There were 8 error messages)
