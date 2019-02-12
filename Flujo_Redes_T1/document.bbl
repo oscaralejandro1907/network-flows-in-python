@@ -1,0 +1,78 @@
+\begin{thebibliography}{12}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Aho~A.V.(1988)]{datos1}
+Ullman~J.E. Aho~A.V., Hopcroft~J.E.
+\newblock \emph{Estructura de Datos y Algoritmos}.
+\newblock Addison-Wesley, 1988.
+
+\bibitem[Alexander~Kouznetsov(2019)]{reflexivo1}
+Maksim~Tsvetovat Alexander~Kouznetsov.
+\newblock Social network analysis for startups, 2019.
+
+\bibitem[Capcha~Ventura(2016)]{capcha2016teoria}
+Romel~F{\'e}lix Capcha~Ventura.
+\newblock La teor{\'\i}a de grafos en la resoluci{\'o}n de problemas
+  aritm{\'e}ticos para estudiantes del laboratorio de investigaci{\'o}n e
+  innovaci{\'o}n pedag{\'o}gica de la universidad nacional daniel alcides
+  carri{\'o}n de pasco-2014.
+\newblock 2016.
+
+\bibitem[Carlos~Garcia(2010)]{scielo2010}
+Norma Cabrera Luisa~Gonzalez Carlos~Garcia, Abel~Rodriguez.
+\newblock Detection and correction of inconsistencies of cyclical references in
+  database logical schemas.
+\newblock \emph{Fac. Ing. Univ. Antioquia}, \penalty0 (55):\penalty0 165--173,
+  2010.
+
+\bibitem[Ferro et~al.(1996)Ferro, Orozco, and Cayssials]{ferro1996asignacion}
+Edgardo Ferro, Javier~D Orozco, and Ricardo Cayssials.
+\newblock Asignaci{\'o}n de tareas en un sistema distribuido de tiempo real
+  duro.
+\newblock In \emph{II Congreso Argentino de Ciencias de la Computaci{\'o}n},
+  1996.
+
+\bibitem[Gonzalez(2008)]{grafo2}
+Zamantha Gonzalez.
+\newblock Grafos.
+\newblock pages 22--25, 2008.
+
+\bibitem[Ian~Robinson and Eifrem(2015)]{graphdatabase}
+Jim~Webber Ian~Robinson and Emil Eifrem.
+\newblock \emph{Graph Databases}.
+\newblock O'Reilly, 1005 Gravenstein Highway North, Sebastopol, CA 95472, 2
+  edition, 2015.
+
+\bibitem[Kesen and Bekta{\c{s}}(2019)]{kesen2019integrated}
+Saadettin~Erhan Kesen and Tolga Bekta{\c{s}}.
+\newblock Integrated production scheduling and distribution planning with time
+  windows.
+\newblock In \emph{Lean and Green Supply Chain Management}, pages 231--252.
+  Springer, 2019.
+
+\bibitem[Lebrun(2005)]{graph2}
+Carlos Arturo~Vega Lebrun.
+\newblock Integracion de herramientas de tecnologias de informacion como
+  soporte en la administracion del conocimiento, 2005.
+
+\bibitem[Miranda(2005)]{multi2005jesus}
+Jesus~Garcia Miranda.
+\newblock \emph{Matematica Discreta}.
+\newblock 2005.
+
+\bibitem[Stein(1961)]{stein1961mathematician}
+Sherman~K Stein.
+\newblock The mathematician as an explorer.
+\newblock \emph{Scientific American}, 204\penalty0 (5):\penalty0 148--161,
+  1961.
+
+\bibitem[West et~al.(2001)]{west2001introduction}
+Douglas~Brent West et~al.
+\newblock \emph{Introduction to graph theory}, volume~2.
+\newblock Prentice hall Upper Saddle River, 2001.
+
+\end{thebibliography}
