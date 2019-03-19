@@ -1,0 +1,174 @@
+\documentclass[10pt,a4paper,openany]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+\usepackage[left=2cm,right=2cm,top=3cm,bottom=2cm]{geometry}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[english]{babel}
+\usepackage{url}
+\usepackage{caption}
+\usepackage{siunitx}
+\usepackage{subfigure}
+
+\setlength{\parindent}{0pt}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ 
+	backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+	basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+	breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+	breaklines=true,                 % sets automatic line breaking
+	captionpos=b,                    % sets the caption-position to bottom
+	commentstyle=\color{mygreen},    % comment style
+	deletekeywords={...},            % if you want to delete keywords from the given language
+	escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+	extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+	firstnumber=01,                	 % start line enumeration with line 1000
+	frame=single,	                 % adds a frame around the code
+	keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+	keywordstyle=\color{blue},       % keyword style
+	language=Python,                 % the language of the code
+	morekeywords={*,...},            % if you want to add more keywords to the set
+	numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+	numbersep=5pt,                   % how far the line-numbers are from the code
+	numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+	rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+	showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+	showstringspaces=false,          % underline spaces within strings only
+	showtabs=false,                  % show tabs within strings adding particular underscores
+	stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+	stringstyle=\color{mymauve},     % string literal style
+	tabsize=2,	                     % sets default tabsize to 2 spaces
+	title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+\author{5273}
+\title{Homework Assignment 3: Network Flows}
+\date{}
+
+\begin{document}
+	
+\maketitle
+	\section*{All Shortest Paths}
+	 
+	Shortest Path Algorithms consist in finding a path between two nodes in a way that the sum of weights of its edges be minimum \citep{schmidt1995all}. If a vertex has two or more predecessors, then there are two or more shortest paths, each of which must be followed separately if we wish to know all shortest paths from $i$ to $j$ \citep{newman2001scientific}.
+	
+	\lstinputlisting[language=Python, firstline=11, lastline=48]{graphs.py}
+	
+	For the shortest path algorithm is selected an undirected graph with five nodes and six edges. This algorithm is run 30 times for a number of 19 000 replicas. The data has a mean of 0.0226 seconds with a standard deviation of 0.01161.
+	
+	With the 30 values of the computation time a histogram is constructed.
+	
+	\begin{center}
+		\includegraphics[scale=0.8]{Histogram_asp}
+		\captionof{figure}{Histogram of All Shortest Paths Algorithm}
+	\end{center}
+	
+	Shapiro-Wilk Test is performed in order to demonstrate if the data is normally distributed. The test shows a p-value of \num{2.72e-5} so the data is not normal distributed.
+	
+\newpage
+	
+	\section*{Betweenness Centrality}
+	
+	This algorithm measures the influence of a vertex over the flow of information in a graph based on shortest paths \citep{unnithan2014betweenness}. A node with higher betweenness centrality would have more control over the network, because more information will pass through that node \citep{freeman1977set}.
+	
+	\lstinputlisting[language=Python, firstline=56, lastline=89]{graphs.py}
+	
+	For the betweenness centrality algorithm is selected a directed graph with ten nodes and eleven edges. This algorithm is run 30 times for a number of 19 000 replicas. The data has a mean of 13.8352 seconds with a standard deviation of 0.4111.
+	
+	With the 30 values of the computation time a histogram is constructed.
+	
+	\begin{center}
+		\includegraphics[scale=0.8]{Histogram_bc}
+		\captionof{figure}{Histogram of Betweeness Centrality Algorithm}
+	\end{center}
+
+	Shapiro-Wilk Test is performed in order to demonstrate if the data is normally distributed. The test shows a p-value of 0.004 so the data is not normal distributed.
+
+\newpage
+		
+	\section*{Depth-First Search Tree}
+		
+	The Depth-First Search (DFS) has the application of traversing a graph and constructing a special structured tree, called a DFS tree \citep{korach1988dfs}. A DFS tree of a graph is a spanning tree produced by performing a DFS algorithm in the graph. Starting from an arbitrary prescribed vertex , the DFS algorithm traverses the graph by repeatedly visiting an unvisited neighbor of the last visited vertex. If all the neighbors of the current vertex have already been visited, the search backtracks until it finds a vertex with an unvisited neighbor to continue \citep{elmasry2013every}.
+	
+	\lstinputlisting[language=Python, firstline=98, lastline=133]{graphs.py}
+	
+	For the DFS Tree algorithm is selected an undirected acyclic graph with eleven nodes and ten edges. This algorithm is run 30 times for a number of 19 000 replicas. The data has a mean of 2.5114 seconds with a standard deviation of 0.1115.
+	
+	With the 30 values of the computation time a histogram is constructed.
+	
+	\begin{center}
+		\includegraphics[scale=0.8]{Histogram_dfs}
+		\captionof{figure}{Histogram of DFS Tree Algorithm}
+	\end{center}
+	
+	Shapiro-Wilk Test is performed in order to demonstrate if the data is normally distributed. The test shows a p-value of \num{3.05e-7} so the data is not normal distributed.
+	
+\newpage
+	
+	\section*{Strongly Connected Components}
+	
+	A strongly connected components of a directed graph is a maximal subset of vertices containing a directed path from each vertex to all others in the subset \citep{fleischer2000identifying}. The traditional, algorithm for finding the strongly connected components in a graph is based on depth first search \citep{mclendon2005finding}.
+	
+	\lstinputlisting[language=Python, firstline=141, lastline=178]{graphs.py}
+	
+	For the strongly connected components algorithm is selected a directed graph with five nodes and six edges. This algorithm is run 30 times for a number of 19 000 replicas. The data has a mean of 1.0484 seconds with a standard deviation of 0.0459.
+	
+	With the 30 values of the computation time a histogram is constructed.
+	
+	\begin{center}
+		\includegraphics[scale=0.8]{Histogram_scc}
+		\captionof{figure}{Histogram of Strongly Connected Components Algorithm}
+	\end{center}
+
+	Shapiro-Wilk Test is performed in order to demonstrate if the data is normally distributed. The test shows a p-value of \num{1.05e-6} so the data is not normal distributed.
+
+\newpage
+	
+	\section*{Topological Sort}
+	A topological sort is used to arrange the vertices of a directed acyclic graph in a linear order \citep{pearce2007dynamic}. For instance, the vertices of the graph may represent tasks to be performed, and the edges may represent constraints that one task must be performed before another; in this application, a topological ordering is just a valid sequence for the tasks \citep{dekel1981parallel}.
+	
+	\lstinputlisting[language=Python, firstline=186, lastline=227]{graphs.py}
+	
+	For the strongly connected components algorithm is selected a directed graph with five nodes and six edges. This algorithm is run 30 times for a number of 19 000 replicas. The data has a mean of 0.0136 seconds with a standard deviation of 0.003.
+	
+	With the 30 values of the computation time a histogram is constructed.
+	
+	\begin{center}
+		\includegraphics[scale=0.8]{Histogram_ts}
+		\captionof{figure}{Histogram of Topological Sort Algorithm}
+	\end{center}
+
+	Shapiro Wilk Test is performed in order to demonstrate if the data is normally distributed. The test shows a p-value of 0.0173 so the data is not normal distributed.
+	
+	\section*{Conclutions}	
+	 Once all algorithms are run, under the same conditions, we can conclude that none of the algorithms are normal distributed. To analyze all the data two scatterplot are also drawn. The first is of execution time vs. number of nodes, whereas the second one is of execution time vs. number of edges.
+	 
+	\begin{figure}[htb]
+		\centering
+		\subfigure[Scatter plot of computation time vs. nodes]{\includegraphics[width=82mm]{scatter_nodes}}
+		\subfigure[Scatter plot of computation time vs. edges]{\includegraphics[width=82mm]{scatter_edges}}
+		
+		\caption{Scatter plots.} \label{fig:scatterplot}
+	\end{figure}
+
+	From the analysis of scatterplots we can say that faster algorithms are: "All Shortest Path" and "Topological Sort". 
+	
+	A violin plot is also drawn, where the horizontal axis represents each of the algorithms and the vertical one represents the corresponding execution time. Here it is evident that the slowest algorithm is "Betweenness Centrality".
+	
+	\begin{center}
+		\includegraphics[scale=1.2]{violin}
+		\captionof{figure}{Violin Plot of Algorithms}
+	\end{center}
+	
+	\bibliography{tarea3}
+	\bibliographystyle{plainnat}
+	
+\end{document}
