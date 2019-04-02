@@ -1,0 +1,214 @@
+\documentclass[10pt,a4paper,openany]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+\usepackage[left=2cm,right=2cm,top=3cm,bottom=2cm]{geometry}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[english]{babel}
+\usepackage{url}
+\usepackage{caption}
+\usepackage{siunitx}
+\usepackage{subfigure}
+\usepackage{float}
+\usepackage{booktabs}
+
+\usepackage{fancyvrb}
+\usepackage[dvipsnames]{xcolor}
+
+\setlength{\parindent}{0pt}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ 
+	backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+	basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+	breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+	breaklines=true,                 % sets automatic line breaking
+	captionpos=b,                    % sets the caption-position to bottom
+	commentstyle=\color{mygreen},    % comment style
+	deletekeywords={...},            % if you want to delete keywords from the given language
+	escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+	extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+	firstnumber=01,                	 % start line enumeration with line 1000
+	frame=single,	                 % adds a frame around the code
+	keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+	keywordstyle=\color{blue},       % keyword style
+	language=Python,                 % the language of the code
+	morekeywords={*,...},            % if you want to add more keywords to the set
+	numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+	numbersep=5pt,                   % how far the line-numbers are from the code
+	numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+	rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+	showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+	showstringspaces=false,          % underline spaces within strings only
+	showtabs=false,                  % show tabs within strings adding particular underscores
+	stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+	stringstyle=\color{mymauve},     % string literal style
+	tabsize=2,	                     % sets default tabsize to 2 spaces
+	title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+% redefine \VerbatimInput
+\RecustomVerbatimCommand{\VerbatimInput}{VerbatimInput}%
+{fontsize=\footnotesize,
+	%
+	frame=lines,  % top and bottom rule only
+	framesep=2em, % separation between frame and text
+	rulecolor=\color{Gray},
+	%
+	label=\fbox{\color{Black}ANOVA.txt},
+	labelposition=topline,
+	%
+	commandchars=\|\(\), % escape character and argument delimiters for
+	% commands within the verbatim
+	commentchar=*        % comment character
+}
+
+\author{5273}
+\title{Homework Assignment 4: Network Flows}
+\date{}
+
+\begin{document}
+	
+\maketitle
+
+	\section*{Introduction}
+	
+	For this work graph generators of the library NetworkX of Python have been used. There have been selected three of these generator for the study: Complete Graph, Wheel Graph and Star Graph. To use each one of them there have been selected a base two as logarithmic base to generate four different graph orders, so the total number of nodes for each graph generator is 4, 8, 16 and 32 nodes respectively. The total number of edges depends on the chosen graph. Edge weights have been generated following a normally distribution with mean of 12 units and a standard deviation of 0.4. 
+	
+	After the assigment of normally distributed weights to edges, these weights would be used as instances of the maximum flow problem. Three implementations of this problem are performed using NetworkX algorithms: Maximum Flow, Minimum Cut and Preflow Push. Each one implementations are performed for each one of the graph generators.
+	
+	This work it is run on an $Intel^{\circledR} $ Celeron CPU $ @ $ 1.10 GHz with 4 GB RAM Laptop.
+	
+	\section*{Graph Generators}
+	\subsection*{Complete Graph}
+	 
+	The first graph generator chosen is the complete graph. This is a simple undirected graph which each pair of nodes is connected by a unique edge \citep{erdos1959graph}. The complete graphs selected, as mentioned at Introduction, have 4, 8, 16 and 32 nodes with 6, 20, 120 and 496 edges respectively.
+	
+	\subsection*{Wheel Graph}
+	The second graph generator chosen is the wheel graph. This is a simple undirected graph characterized by its single hub node connected to each of the (n-1)-node cycle graph \citep{networkx}. The wheel graphs selected, as well as the other graph generators, have 4, 8, 16 and 32 nodes with 6, 14, 30 and 462 edges respectively.
+	
+	\subsection*{Star Graph}
+	The third graph generator chosen is the star graph. This is a simple undirected graph that it can be considered as a tree with one internal node and $ k $ leaves \citep{mendia1992optimal}. The star graphs selected, as well as the other graph generators, have an order of 4, 8, 16 and 32 nodes with also 4, 8, 16 and 32 edges respectively.
+
+\newpage
+
+	\lstinputlisting[language=Python, firstline=30, lastline=61]{graphs_t4.py}
+	
+	\section*{Maximum Flow Algorithms}
+	
+	\subsection*{Maximum Flow}
+	The algorithm can be used in the three chosen graph generators since the settings of the arc capacities
+	are not fixed and are functions of a single parameter \citep{gallo1989fast}, it have been defined the source and the sink in each graph and a positive capacity for every edge. The value of the flow is the net flow out of the source. The maximum flow problem is that of finding a flow of maximum value \citep*{king1994faster}.
+	
+	\lstinputlisting[language=Python, firstline=72, lastline=77]{graphs_t4.py}
+	
+	\lstinputlisting[language=Python, firstline=115, lastline=120]{graphs_t4.py}
+
+\newpage
+	
+	\lstinputlisting[language=Python, firstline=158, lastline=163]{graphs_t4.py}
+	
+	\subsection*{Minimum Cut}
+	This algorithm can performed well with the three chosen graph generators, which are undirected edge-weighted graphs. The minimum cut of an undirected graph with edge weights, consists in a set of edges with minimum sum of weights, such that its removal would cause the graph to become unconnected \citep{stoer1997simple}.
+	
+	\lstinputlisting[language=Python, firstline=87, lastline=92]{graphs_t4.py}
+	
+	\lstinputlisting[language=Python, firstline=130, lastline=135]{graphs_t4.py}
+	
+	\lstinputlisting[language=Python, firstline=172, lastline=177]{graphs_t4.py}
+	
+	\subsection*{Preflow Push}
+	This implementation finds a maximum single-commodity flow using the highest-label preflow-push algorithm \citep{networkx} .
+	It returns the residual network resulting after computing the maximum flow, which also have been performed.
+	
+	\lstinputlisting[language=Python, firstline=101, lastline=106]{graphs_t4.py}
+	
+	\lstinputlisting[language=Python, firstline=145, lastline=150]{graphs_t4.py}
+	
+	\lstinputlisting[language=Python, firstline=186, lastline=192]{graphs_t4.py}
+	
+	
+	\section*{Experimental Results}	
+	Once all corresponding graphs are generated it can be evaluated throughout statistical methods and visualizations the effect of the used graph generator in the computation time, as well as the maximum flow algorithms, the graph order and the density of the graph.
+	
+	For every effect a boxplot is shown.
+	
+	The first boxplot shows the effect of the graph generator in the computation time.
+	
+	Data for Complete Graph has a mean of 0.011743807 and a standard deviation of 0.013289318, whereas data for Wheel Graph has a mean of 0.002271925 and a standart deviation of 0.001256446, and the Star Graph Generator has a mean of 0.003683368 and a standard deviation of 0.002426251.	
+	
+	\begin{center}
+		\includegraphics[scale=0.8]{box_generator}
+		\captionof{figure}{Boxplot of the graph generators}
+	\end{center}
+
+	In this graph differences are seen between groups, especially in Complete Graph which has higher values than the other two graph generators. Also the groups have different distribution. 
+	
+\newpage
+	
+	The second boxplot shows the effect of the maximum flow algorithms in the computation time.
+	
+	Data for Maximum Flow has a mean of 0.006351 and a standard deviation of 0.009479, whereas data for Minimum Cut has a mean of 0.005868 and a standart deviation of 0.009092, and the Preflow Push has a mean of 0.005480 and a standard deviation of 0.007968.
+	
+	\begin{center}
+		\includegraphics[scale=0.8]{box_algorithm}
+		\captionof{figure}{Boxplot of maximum flow algorithms}
+	\end{center}
+
+	From the graph can be seen some similarities among the group of algorithms but further analysis must be perform to corroborate this.
+
+	The third boxplot shows the effect of the graph order in the computation time.
+	
+	Data for Order 4 has a mean of 0.001124 and a standard deviation of 0.000144, whereas data for Order 8 has a mean of 0.002206 and a standart deviation of 0.000651, Order 16  has a mean of 0.005231 and a standard deviation of  0.002970 and Order 32 has a mean of 0.015039 and a standard deviation of 0.013616.   
+
+	\begin{center}
+	\includegraphics[scale=0.8]{box_order}
+	\captionof{figure}{Boxplot of graph order}
+	\end{center}
+
+	Here a difference in order is clearly seen. As the order grows the execution time grows as well, so it can be think they may be positive correlated.
+
+	The fourth boxplot shows the effect of the eight values of the density in the computation time. Data of the mean and standart deviation is shown below.
+	
+	\begin{table}[H]
+		\caption{Mean and Standart Deviation values for graph densities}
+		\label{my-label}
+		\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+			\hline
+			& \textbf{0.06}                 & \textbf{0.12}                 & \textbf{0.13}                 & \textbf{0.25}                 & \textbf{0.29}                 & \textbf{0.50}                 & \textbf{0-67}                 & \textbf{1.00}                 \\ \hline
+			\textbf{Mean}               & \multicolumn{1}{r|}{0.004190} & \multicolumn{1}{r|}{0.007376} & \multicolumn{1}{r|}{0.002408} & \multicolumn{1}{r|}{0.004039} & \multicolumn{1}{r|}{0.001476} & \multicolumn{1}{r|}{0.002168} & \multicolumn{1}{r|}{0.001014} & \multicolumn{1}{r|}{0.009625} \\ \hline
+			\textbf{Standard Deviation} & 0.000507                      & 0.000829                      & 0.000300                      & 0.000540                      & 0.000189                      & 0.000209                      & 0.000112                      & 0.012618                      \\ \hline
+		\end{tabular}
+	\end{table}
+
+	\begin{center}
+	\includegraphics[scale=0.8]{box_density}
+	\captionof{figure}{Boxplot of density}
+	\end{center}	
+	
+	Here it can be seen the effect of the density in the execution time, showing differences in the distribution of each group.
+	
+	\vspace*{0,2 cm}
+	In order to see if these effects have interactions an ANOVA is performed.
+	\VerbatimInput{ANOVA.txt}
+	
+	From the ANOVA it can be said $ p $-values are quite small, so there are differences among group means, concluding that all variables are related with the execution time
+	
+	For an analysis of correlation it is performed a scatter matrix, showing the relation of the quantitative variables and its corresponding scatterplots, the kernel density estimation as a way to estimate the probability density function of the variables and the coeficients of correlation between the variables, where it can be seen the highest correlation is between the variables time and order, with a value of 0.613, but still it is not a strong relation.
+	
+	\begin{center}
+		\includegraphics[scale=0.8]{scatter_matrix}
+		\captionof{figure}{Scatter Matrix of the cuantitative variables}
+	\end{center}
+	
+	\bibliography{tarea4}
+	\bibliographystyle{plainnat}
+	
+\end{document}
