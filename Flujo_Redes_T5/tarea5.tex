@@ -1,0 +1,231 @@
+\documentclass[10pt,a4paper,openany]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+\usepackage[left=2cm,right=2cm,top=3cm,bottom=2cm]{geometry}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[english]{babel}
+\usepackage{url}
+\usepackage{caption}
+\usepackage{siunitx}
+\usepackage{subfigure}
+\usepackage{float}
+\usepackage{booktabs}
+
+\usepackage{fancyvrb}
+\usepackage[dvipsnames]{xcolor}
+
+\setlength{\parindent}{0pt}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ 
+	backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+	basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+	breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+	breaklines=true,                 % sets automatic line breaking
+	captionpos=b,                    % sets the caption-position to bottom
+	commentstyle=\color{mygreen},    % comment style
+	deletekeywords={...},            % if you want to delete keywords from the given language
+	escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+	extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+	firstnumber=01,                	 % start line enumeration with line 1000
+	frame=single,	                 % adds a frame around the code
+	keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+	keywordstyle=\color{blue},       % keyword style
+	language=Python,                 % the language of the code
+	morekeywords={*,...},            % if you want to add more keywords to the set
+	numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+	numbersep=5pt,                   % how far the line-numbers are from the code
+	numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+	rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+	showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+	showstringspaces=false,          % underline spaces within strings only
+	showtabs=false,                  % show tabs within strings adding particular underscores
+	stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+	stringstyle=\color{mymauve},     % string literal style
+	tabsize=2,	                     % sets default tabsize to 2 spaces
+	title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+% redefine \VerbatimInput
+\RecustomVerbatimCommand{\VerbatimInput}{VerbatimInput}%
+{fontsize=\footnotesize,
+	%
+	frame=lines,  % top and bottom rule only
+	framesep=2em, % separation between frame and text
+	rulecolor=\color{Gray},
+	%
+	label=\fbox{\color{Black}ANOVA.txt},
+	labelposition=topline,
+	%
+	commandchars=\|\(\), % escape character and argument delimiters for
+	% commands within the verbatim
+	commentchar=*        % comment character
+}
+
+\author{5273}
+\title{Homework Assignment 5: Network Flows}
+\date{}
+
+\begin{document}
+	
+\maketitle
+
+	\section*{Introduction}
+	
+	For this work the library NetworkX of Python have been use to generate an undirected powerlaw cluster graph of 8 nodes \citep{networkx}. This graph it is used to define the instances, characterized by the graph and different pairs of source and targets. Edge weights have been generated following a normal distribution with mean of 3 units and a standard deviation of 1.5. This data it is used to generate a system where a maximum flow problem needs to be solved.
+
+	
+	This work it is run on an Intel Celeron CPU $ @ $ 1.10 GHz with 4 GB RAM laptop.
+	
+	
+	The powerlaw cluster graph has been chosen because it perfectly can modelate a logistic supply chain network where every node represents each logistic point and the edges the possible connections between every point\citep{gallo1989fast}. The objective is to maximize the flow of value in the network\citep{erdos1959graph}.
+	
+	In order to draw this situation a Fruchterman-Reingold layout is chosen, which seems to be the good way to understand the interactions among nodes because of the attempts to minimize the number of overlapping nodes and edges \citep{tsay2010hierarchically}. Also this layout allows to to distribute vertices evenly, make edge lengths uniform, and reflect symmetry \citep{fruchterman1991graph}.
+
+	The nodes are represented by different colors. The skyblue color represents the source nodes whereas the orange color represents the targets nodes. The rest of the nodes are represented in red. Another visual modification made is that sources and target nodes are represented with a bigger size than the other nodes. 
+	
+	In the case of edges they are represented in black color. The width of the edge indicates its capacity, for example, wider edges are the ones with greater capacity. When the maximum flow algorithm is executed those edges where the flow passes are colored in red in order to indicate the maximum flow produced by the algorithm.
+	
+		\lstinputlisting[language=Python, firstline=39, lastline=68]{graphs_t5.py}
+	
+	\section*{Structural Characterization of Instances}
+	
+	Instances are characterized by a Graph, in this case the powerlaw cluster graph, by a source node and by a target node. For this work 5 instances are generated. The source and target nodes are selected at random.
+	\begin{figure}[H]
+		\centering
+		\subfigure[Visualization of Instance 01]{\includegraphics[width=82mm]{instance01}}
+		\subfigure[Visualization of Instance 02]{\includegraphics[width=82mm]{instance02}}
+		\subfigure[Visualization of Instance 03]{\includegraphics[width=82mm]{instance03}}
+		\subfigure[Visualization of Instance 04]{\includegraphics[width=82mm]{instance04}}
+		\subfigure[Visualization of Instance 05]{\includegraphics[width=82mm]{instance05}}
+		
+		\caption{Instances} \label{fig:instances}
+	\end{figure}
+
+	\newpage
+
+	This way the instances are:
+	
+	\begin{itemize}
+		\item Instance 01: G, 5, 4.
+		\item Instance 02: G, 4, 7.
+		\item Instance 03: G, 6, 2.
+		\item Instance 04: G, 4, 0.
+		\item Instance 05: G, 2, 7.	
+	\end{itemize}
+
+For the visualized graphs the following 6 structural characteristics have been calculated:
+
+\begin{itemize}
+	\item Degree distribution
+	\item Clustering coefficient
+	\item Closeness centrality
+	\item Load centrality
+	\item Eccentricity
+	\item Page Rank		
+\end{itemize}
+
+	In order to analyze the influence of this characteristics in the execution time as well as in the optimum value boxplots are constructed.
+	
+	Also an analysis of best sources and targets it is carried out based on the values of the maximum flow algorithm. Three nodes are given to conclude those best values.
+	
+	For this analysis, within each instance a source node is fixed and the other nodes are variable, then the maximum flow algorithm is executed and the best three values will be considered as the better ones for that instance. The same procedure is followed for target nodes. 
+	
+	As a result the best target nodes for Instance 01 are the nodes 6, 7 and 1, whereas the best source nodes are 0, 1 and 2 if we want to maximize the flow of the network.
+	
+	For Instance 02 the best targets are 0, 1 and 3, whereas nodes 6, 5 and 0 are the best sources
+	
+	In case of Instance 03 nodes 5, 7 and 3 are the best targets and nodes 3, 4 and 5 are the best sources.
+	
+	For Instance 04 the results are 3, 5 and 7 as best targets and 2, 3 and 4 as the best sources.
+	
+	Last, for Instance 05 the best targets are 0, 1 and 3 whereas the best sources are 5, 6 and 0.
+	
+	Moreover, it is important to investigate the effect of the structural characteristics of vertices in the computation time.
+	In the case of Instance 01 Computation Time seems to be quite similar but with a little different in case of node 7 which have the greater objective value and the longest time. 
+	These results are shown in the figures bellow:
+		
+	\begin{figure}[H]
+		\centering
+		\subfigure[Boxplot of Degree Distribution]{\includegraphics[width=82mm]{boxplot_degree_i0}}
+		\subfigure[Boxplot of Clustering Components]{\includegraphics[width=82mm]{boxplot_clustering_i0}}
+		\subfigure[Boxplot of Closeness Centrality]{\includegraphics[width=82mm]{boxplot_closeness_i0}}
+		\subfigure[Boxplot of Load Centrality]{\includegraphics[width=82mm]{boxplot_load_i0}}
+		\subfigure[Boxplot of Eccentricity]{\includegraphics[width=82mm]{boxplot_eccentricity_i0}}
+		\subfigure[Boxplot of Page Rank]{\includegraphics[width=82mm]{boxplot_pagerank_i0}}
+		
+		\caption{Boxplots of Instance 01} \label{fig:instances}
+	\end{figure}
+
+For Instance 02 we have something similar like Instance 01, where time is different in case of some node 0, being the longest in the characteristics Degree Distribution, Clustering Componets and Closeness Centrality, the rest is practically the same. Also this node has the second highest flow value. Here the maximum flow values are lower than Instance 01.
+
+\begin{figure}[H]
+	\centering
+	\subfigure[Boxplot of Degree Distribution]{\includegraphics[width=82mm]{boxplot_degree_i1}}
+	\subfigure[Boxplot of Clustering COmponents]{\includegraphics[width=82mm]{boxplot_clustering_i1}}
+	\subfigure[Boxplot of Closeness Centrality]{\includegraphics[width=82mm]{boxplot_closeness_i1}}
+	\subfigure[Boxplot of Load Centrality]{\includegraphics[width=82mm]{boxplot_load_i1}}
+	\subfigure[Boxplot of Eccentricity]{\includegraphics[width=82mm]{boxplot_eccentricity_i1}}
+	\subfigure[Boxplot of Page Rank]{\includegraphics[width=82mm]{boxplot_pagerank_i1}}
+	
+	\caption{Boxplots of Instance 02} \label{fig:instances}
+\end{figure}
+
+For Instance 03 the time variable is almost the same in all cases, it could be due to the closest values of maximum flow, and also they are not high in comparison with the other instances.
+	
+	
+\begin{figure}[H]
+	\centering
+	\subfigure[Boxplot of Degree Distribution]{\includegraphics[width=82mm]{boxplot_degree_i2}}
+	\subfigure[Boxplot of Clustering COmponents]{\includegraphics[width=82mm]{boxplot_clustering_i2}}
+	\subfigure[Boxplot of Closeness Centrality]{\includegraphics[width=82mm]{boxplot_closeness_i2}}
+	\subfigure[Boxplot of Load Centrality]{\includegraphics[width=82mm]{boxplot_load_i2}}
+	\subfigure[Boxplot of Eccentricity]{\includegraphics[width=82mm]{boxplot_eccentricity_i2}}
+	\subfigure[Boxplot of Page Rank]{\includegraphics[width=82mm]{boxplot_pagerank_i2}}
+	
+	\caption{Boxplots of Instance 03} \label{fig:instances}
+\end{figure}	
+
+In the case of Instance 04 it can be found the lowest values of flow for the instances tested. Here in some cases node 0 has some peacks in execution time in the case of Degree Distribution and Clustering Components. Also node 5 presents a higher time for Load Centrality and Eccentricity.
+
+\begin{figure}[H]
+	\centering
+	\subfigure[Boxplot of Degree Distribution]{\includegraphics[width=82mm]{boxplot_degree_i3}}
+	\subfigure[Boxplot of Clustering COmponents]{\includegraphics[width=82mm]{boxplot_clustering_i3}}
+	\subfigure[Boxplot of Closeness Centrality]{\includegraphics[width=82mm]{boxplot_closeness_i3}}
+	\subfigure[Boxplot of Load Centrality]{\includegraphics[width=82mm]{boxplot_load_i3}}
+	\subfigure[Boxplot of Eccentricity]{\includegraphics[width=82mm]{boxplot_eccentricity_i3}}
+	\subfigure[Boxplot of Page Rank]{\includegraphics[width=82mm]{boxplot_pagerank_i3}}
+	
+	\caption{Boxplots of Instance 04} \label{fig:instances}
+\end{figure}	
+
+For Instance 05 all data seems to be similar without any node standing out from others as the figure shows below.
+\begin{figure}[H]
+	\centering
+	\subfigure[Boxplot of Degree Distribution]{\includegraphics[width=82mm]{boxplot_degree_i4}}
+	\subfigure[Boxplot of Clustering COmponents]{\includegraphics[width=82mm]{boxplot_clustering_i4}}
+	\subfigure[Boxplot of Closeness Centrality]{\includegraphics[width=82mm]{boxplot_closeness_i4}}
+	\subfigure[Boxplot of Load Centrality]{\includegraphics[width=82mm]{boxplot_load_i4}}
+	\subfigure[Boxplot of Eccentricity]{\includegraphics[width=82mm]{boxplot_eccentricity_i4}}
+	\subfigure[Boxplot of Page Rank]{\includegraphics[width=82mm]{boxplot_pagerank_i4}}
+	
+	\caption{Boxplots of Instance 05} \label{fig:instances}
+\end{figure}	
+
+As a conclution it can be said that the maximum flow value obtained is 20.65 units with Instance 01 being node 7 the target and node 5 the source. On the other hand Instance 03 is the one with lowest objectives values with nodes 2 and six Indicating they are not good target and source nodes for maximizing flow.
+
+Page Rank and Closeness centrality are the slowest characteristics in terms of execution time, whereas the fastest characteristics are Degree distribution and Clustering Components but we can not say there is a correlation between the objective value and the execution time. So, aumenting the number of instances results more accurated could be reached.
+	
+	\bibliography{tarea5}
+	\bibliographystyle{plainnat}
+	
+\end{document}
