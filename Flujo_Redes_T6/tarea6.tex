@@ -1,0 +1,164 @@
+\documentclass[10pt,a4paper,openany]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+\usepackage[left=2cm,right=2cm,top=3cm,bottom=2cm]{geometry}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[english]{babel}
+\usepackage{url}
+\usepackage{caption}
+\usepackage{siunitx}
+\usepackage{subfigure}
+\usepackage{float}
+\usepackage{booktabs}
+
+\usepackage{fancyvrb}
+\usepackage[dvipsnames]{xcolor}
+
+\setlength{\parindent}{0pt}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ 
+	backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+	basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+	breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+	breaklines=true,                 % sets automatic line breaking
+	captionpos=b,                    % sets the caption-position to bottom
+	commentstyle=\color{mygreen},    % comment style
+	deletekeywords={...},            % if you want to delete keywords from the given language
+	escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+	extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+	firstnumber=01,                	 % start line enumeration with line 1000
+	frame=single,	                 % adds a frame around the code
+	keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+	keywordstyle=\color{blue},       % keyword style
+	language=Python,                 % the language of the code
+	morekeywords={*,...},            % if you want to add more keywords to the set
+	numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+	numbersep=5pt,                   % how far the line-numbers are from the code
+	numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+	rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+	showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+	showstringspaces=false,          % underline spaces within strings only
+	showtabs=false,                  % show tabs within strings adding particular underscores
+	stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+	stringstyle=\color{mymauve},     % string literal style
+	tabsize=2,	                     % sets default tabsize to 2 spaces
+	title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+% redefine \VerbatimInput
+\RecustomVerbatimCommand{\VerbatimInput}{VerbatimInput}%
+{fontsize=\footnotesize,
+	%
+	frame=lines,  % top and bottom rule only
+	framesep=2em, % separation between frame and text
+	rulecolor=\color{Gray},
+	%
+	label=\fbox{\color{Black}ANOVA.txt},
+	labelposition=topline,
+	%
+	commandchars=\|\(\), % escape character and argument delimiters for
+	% commands within the verbatim
+	commentchar=*        % comment character
+}
+
+\author{5273}
+\title{Homework Assignment 6: Network Flows}
+\date{}
+
+\begin{document}
+	
+\maketitle
+
+	\section*{Introduction}
+	
+	A water distribution system has a significant role in preserving and providing a desirable life to people, so the reliability of the supply is a key factor. Several works have defined the reliability of water distribution system \citep{kaufmann1977mathematical,goulter1995analytical,cullinane1992optimization} as the probability or ability of the system to meet the demands of consumers during a specified time. The demands are specified in terms of the flow rates at an adequate range of pressure.
+	
+	The problem of determining connectivity of a network arises in issues of network design and reliability. In a network with random edge failures, the network could be partitioned at the minimum cuts. The minimum cut problem consists in given an undirected graph with $ n $ vertices and $ m $ edges, and it is need a partition of the vertices into two nonempty sets so as to minimize the number of edges crossing between them \citep{karger1996new}. \citet{su1987reliability} defines the minimum cut set as a set of system components(i.e., pipes) which, when failed, causes failure of the whole system. On the other hand, system failure will not happen if any of this set of components does not fail \citep{billinton1992reliability}.
+	 
+	In this work it is studied a water distribution pipeline network throughout a connectivity analysis. It could be useful to have an idea of the reliability of the network, applying a minimum cut-set method \citep{al2005evaluation}, which allows the calculation of nodal pressures.
+	
+	For this project the library NetworkX of Python has been used to generate an undirected powerlaw cluster graph of 121 nodes and 120 edges \citep{networkx}. Edge weights have been generated randomly with non-negative values. This work it is run on an Intel Celeron CPU $ @ $ 1.10 GHz with 4 GB RAM laptop.
+	
+	\section*{Case of Study: Water Distribution Reliability}
+	It is presented a case about a Water Distribution Supplier (WDS), represented as node 0. The  system is composed of approximately 120 pipes and 121 demand  nodes (corresponding to users) that are spread across an area. To analyze the interrelationship among the components, the system is first transformed into a network repesentation.
+	
+		\lstinputlisting[language=Python, firstline=10, lastline=34]{graphs_t6.py}
+	
+	\begin{center}
+		\includegraphics[scale=0.8]{Graph1}
+		\captionof{figure}{Water distribution network}
+	\end{center}
+	
+	Figure 1 shows this graph representation where can be seen 3 different clusters. This groups represent the neighbourhoods where water needs to be transported.
+	
+	For Cluster 1 is run the maximum flow algorithm, collecting data of the flow values. The source node is always WDS and the target is the demanding node of that cluster. This algorithm is applied to every node of the cluster. The data has a mean of 2.61 units with a standard deviation of 0.474. With these flow values a histogram is constructed.
+	
+	\begin{center}
+		\includegraphics[scale=0.7]{Histogram_Cluster1}
+		\captionof{figure}{Histogram of water flow values for Cluster 1}
+	\end{center}
+
+\newpage
+
+	Shapiro-Wilk Test is performed in order to demonstrate if the data is normally distributed. The test shows a $ p-value $ of \num{9.42e-5} so the data is not normally distributed.
+	
+		\lstinputlisting[language=Python, firstline=68, lastline=100]{graphs_t6.py}
+
+	For Cluster 2 is run the maximum flow algorithm, collecting data of the flow values. The source node is always the WDS and the target is the demanding node of that cluster. This algorithm is applied to every node of the cluster. The data has a mean of 2.54 units with a standard deviation of 0.219. With these flow values a histogram is constructed.
+	
+	\begin{center}
+		\includegraphics[scale=0.65]{Histogram_Cluster2}
+		\captionof{figure}{Histogram of water flow values for Cluster 2}
+	\end{center}
+	
+	Shapiro-Wilk Test is performed in order to demonstrate if the data is normally distributed. The test shows a $ p-value $ of \num{2.90e-7} so the data is not normally distributed.
+	
+		\lstinputlisting[language=Python, firstline=102, lastline=134]{graphs_t6.py}
+		
+	For Cluster 3 is run the maximum flow algorithm, collecting data of the flow values. The source node is always WDS and the target is the demanding node of that cluster. This algorithm is applied to every node of the cluster. The data has a mean of 2.79 units with a standard deviation of 0.35. With these flow values a histogram is constructed.
+	
+	\begin{center}
+		\includegraphics[scale=0.8]{Histogram_Cluster3}
+		\captionof{figure}{Histogram of water flow values for Cluster 3}
+	\end{center}
+	
+	Shapiro-Wilk Test is performed in order to demonstrate if the data is normally distributed. The test shows a $ p-value $ of 0.044 so the data is not normally distributed.
+	
+	\lstinputlisting[language=Python, firstline=157, lastline=168]{graphs_t6.py}
+	
+	In order to compare the demanding amount of water of every cluster a boxplot is constructed. Here we can see Cluster 3 is a bit more water demanding than the others. Cluster 1 is the one with more dispersion and also have the outlier with higuest flow value of all clusters.
+	
+	\begin{center}
+		\includegraphics[scale=0.8]{boxplot_flow_value}
+		\captionof{figure}{Boxplot of water flow values for all Clusters}
+	\end{center}
+			
+	The minimum cut set approach could be applied to calculate this system reliability. The impact of link failures on source-demand connectivity it could be a measure of the impact of the mechanical reliability of the water distribution network \citep{yang1996water}. The focus is on whether a demand node can get any water from the available sources.
+	
+	After the cut the network is divided in to sets of nodes:
+	
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|l|l|}
+			\hline
+			Set A                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   & Set B                                                                                                      \\ \hline
+			\begin{tabular}[c]{@{}l@{}}\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, \\ 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, \\ 28, 29, 30, 31, 32, 33, 34, 35, 36, 40, 41, 42, \\ 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, \\ 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, \\ 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, \\ 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, \\ 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, \\ 102, 103, 104, 105, 106, 107, 108, 109, 110, \\ 111\}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\{37, 38, 39, 12, 112, 113, 114, \\ 115, 116, 117, 118, 119, 120\}\end{tabular} \\ \hline
+		\end{tabular}
+	\caption{\label{tab:table-name}Sets of nodes after the minimum cut.}
+	\end{table}
+	
+	The cut is performed at the pipes with lower demands (lower edge weights). Here the minimum cut value is the sum of the capacities of the cut edges. This value when the algorithm is executed is 2.664 units.
+	
+	\bibliography{tarea6}
+	\bibliographystyle{plainnat}
+	
+\end{document}
